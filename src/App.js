@@ -1,4 +1,5 @@
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import Name from './components/Name'
 import './App.css';
 import Music from './components/Music'
@@ -19,6 +20,7 @@ function App() {
       <Name />
       <Main />
     </div>
+    <Footer />
     </BrowserRouter>
   );
 }

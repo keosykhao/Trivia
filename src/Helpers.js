@@ -46,6 +46,7 @@ export const styles = {
         {id:"total_medium_question_count", name:"Medium"},
         {id:"total_hard_question_count", name:"Hard"},
     ];
+    // this turns html into regular text
     export const createMarkup = (text) => {
         return {__html: text}
     };

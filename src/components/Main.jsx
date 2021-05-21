@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => {
   });
   
   const Main = () => {
+    //   add state to functional components
     const [categories, setCategories] = useState([]);
     const [category, setCategory] = useState({ id: "", name: "" });
   
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => {
     const classes = useStyles();
   
     const [currentQuizStep, setCurrentQuizStep] = useState("start");
-  
+//   fetch data from the open trivia api
     const fetchQuizData = async () => {
       try {
         const url = `https://opentdb.com/api.php?amount=${quizNumber}&category=${
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => {
           const randomIndex = Math.round(
             Math.random() * (incorrectAnswersIndexes - 0) + 0
           );
-  
+//   put the correct answers and wrong answers into on array
           cat.incorrect_answers.splice(randomIndex, 0, cat.correct_answer);
           
           return {
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => {
         console.log("Fetch quiz error =====>>>>", error);
       }
     };
-  
+//   gets different categories for trivia
     const fetchCategories = async () => {
       const { data } = await axios.get(`https://opentdb.com/api_category.php`);
       setCategories(data.trivia_categories);
@@ -61,7 +62,7 @@ const useStyles = makeStyles((theme) => {
       fetchCategories();
       window.scrollTo(0, "20px");
     }, []);
-  
+//   when user selects all options then clicks submit it will display the questions
     const handleSubmit = (e) => {
       e.preventDefault();
       if (!quizData.length && quizNumber && category.id && difficulty) {
@@ -117,7 +118,7 @@ const useStyles = makeStyles((theme) => {
                   <Grid item xs={12}>
                     <FormControl fullWidth variant="outlined">
                       <InputLabel id="category-select-label">
-                        Select category:
+                        Choose category:
                       </InputLabel>
                       <Select
                         required
@@ -143,7 +144,7 @@ const useStyles = makeStyles((theme) => {
                   <Grid item xs={12}>
                     <FormControl fullWidth variant="outlined">
                       <InputLabel id="difficulty-select-label">
-                        Select Difficulty:
+                        Choose Difficulty:
                       </InputLabel>
                       <Select
                         required
@@ -164,14 +165,14 @@ const useStyles = makeStyles((theme) => {
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
-                      inputProps={{ min: 1, max: 10 }}
+                      inputProps={{ min: 5, max: 20 }}
                       required
                       fullWidth
                       type="number"
                       id="quiz-number"
                       variant="outlined"
                       name="quiz-number"
-                      label={`Add a quiz number from 1 to 10`}
+                      label={`Enter # of questions 5-20`}
                       value={quizNumber || ""}
                       onChange={handleChange}
                     />
