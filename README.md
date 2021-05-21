@@ -1,6 +1,6 @@
 
 
-Click the link below to go to my app
+Click the link to go to my app
 [Trivia App](https://anntrivia.herokuapp.com/)
 # Getting Started with Create React App
 
