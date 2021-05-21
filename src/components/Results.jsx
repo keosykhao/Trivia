@@ -1,6 +1,7 @@
 
 import { Button, Typography } from '@material-ui/core'
 import { useEffect } from 'react';
+import Answered from './Answered'
 
 const Results = ({
     classes,
