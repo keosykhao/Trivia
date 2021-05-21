@@ -1,20 +1,25 @@
+import Header from './components/Header/Header'
 import Name from './components/Name'
 import './App.css';
-import Music from './components/Music';
-import Selctions from './components/Selections'
+import Music from './components/Music'
 import Main from './components/Main'
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 function App() {
   return (
-    <div className="App" style={{ 
-      backgroundImage: `url("http://3diphonewallpaper.com/wp-content/uploads/2020/03/Wallpapers-iPhone-Cool-Anime.jpg")` 
+    <BrowserRouter>
+    <div className="app" style={{ 
+      backgroundImage: `url("/cherryblossom.png")` 
     }}>
-      <h1>Annie May Trivia</h1>
+     
+      <Header />
+      <Music />
       <Name />
       <Main />
-      
-     <Music />
     </div>
+    </BrowserRouter>
   );
 }
 
