@@ -13,7 +13,10 @@ import React, { Component } from 'react';
              published: '';
          }
      }
-
+     handleQuestionChange = (event) =>{
+         this.setState({question: event.target.value})
+         console.log("changing")
+     }
      
     render() {
         return (
