@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react',
+import TriviaComponent from './TriviaComponent';
+import TriviaServices from '../service/TriviaServices';
 
 export default class TriviaComponent extends Component {
         constructor(){

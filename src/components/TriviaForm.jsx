@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-
-import React, { Component } from 'react';
+import TriviaServices from '../service/TriviaServices';
+import React from 'react';
 
  class TriviaForm extends Component {
      constructor(){
@@ -54,6 +54,6 @@ import React, { Component } from 'react';
                 </form>
             </div>
         )
-    }
-}
+    };
+
 export default TriviaForm;
