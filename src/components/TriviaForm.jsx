@@ -35,7 +35,11 @@ import React, { Component } from 'react';
             published : this.state.published,
             
         }
-        
+         axios.post("http://localhost:8080/question", data)
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            })
     render() {
         return (
             <div>
