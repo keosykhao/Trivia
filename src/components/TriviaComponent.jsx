@@ -14,11 +14,11 @@ export default class TriviaComponent extends Component {
                 triviaItems : response.data
             })
         })
-    }
+    };
 
     deleteTriviaItem(id){
         axios.delete(`http//localhost:8080/question/${id}`)
-    }
+    };
     // create our table
     render(){
         return(
@@ -53,7 +53,7 @@ export default class TriviaComponent extends Component {
             </table>
             </div>
 )
-        }
+        };
     
 export default TriviaComponent;
 
