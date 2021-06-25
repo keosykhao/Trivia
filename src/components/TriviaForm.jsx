@@ -25,6 +25,17 @@ import React, { Component } from 'react';
         this.setState({publish: event.target.value})
         console.log("Changing")
     }
+    handleSubmit(e){
+        e.preventDefault();
+        window.location.reload(false)
+        // set a variable for our state to live in
+        const data = {
+            question : this.state.question,
+            answer : this.state.answer,
+            published : this.state.published,
+            
+        }
+        
     render() {
         return (
             <div>
