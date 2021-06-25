@@ -17,7 +17,14 @@ import React, { Component } from 'react';
          this.setState({question: event.target.value})
          console.log("changing")
      }
-     
+     handleAnswerChange = (event) => {
+        this.setState({answer: event.target.value})
+        console.log("Changing")
+    }
+    handlePublishChange = (event) => {
+        this.setState({publish: event.target.value})
+        console.log("Changing")
+    }
     render() {
         return (
             <div>
