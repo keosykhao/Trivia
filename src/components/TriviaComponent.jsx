@@ -1,8 +1,8 @@
-import React, { Component } from 'react',
-import TriviaComponent from './TriviaComponent';
+import React, { Component } from 'react';
+
 import TriviaServices from '../service/TriviaServices';
 
-export default class TriviaComponent extends Component {
+ class TriviaComponent extends Component {
         constructor(){
             super()
             // this is the data from our db
@@ -16,11 +16,11 @@ export default class TriviaComponent extends Component {
                 triviaItems : response.data
             })
         })
-    };
+    }
 
     deleteTriviaItem(id){
         axios.delete(`http//localhost:8080/question/${id}`)
-    };
+    }
     // create our table
     render(){
         return(

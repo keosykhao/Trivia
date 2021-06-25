@@ -5,6 +5,7 @@ import './App.css';
 import Music from './components/Music'
 import Main from './components/Main'
 import { BrowserRouter } from 'react-router-dom';
+import TriviaComponent from './components/TriviaComponent';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Music />
       <Name />
       <Main />
+      <TriviaComponent />
     </div>
     <Footer />
     </BrowserRouter>
