@@ -43,7 +43,15 @@ import React, { Component } from 'react';
     render() {
         return (
             <div>
-                
+                <form onSubmit={this.submitInfo}>
+                    <label>
+                        <input typeof='text' name='question' onChange={this.handleQuestionChange} placeholder='Question' required></input>
+                        <input typeof='text' name='answer' onChange={this.handleAnswerChange} placeholder='answer' required></input>
+                        <input typeof='text' name='published' onChange={this.handlePublishChange} placeholder='quantity' required></input>
+                   
+                    </label>
+                    <button typeof='submit'>Add</button>
+                </form>
             </div>
         )
     }
